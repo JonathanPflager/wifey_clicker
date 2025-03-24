@@ -1,0 +1,38 @@
+#score {
+    font-size: 30px;
+    color: rgba(138, 0, 202, 0.541);
+}
+
+#left{
+    float: left;
+    size: 50%;
+}
+
+#right{
+    float: right;
+    size: auto;
+}
+
+button {
+    font-size: 15px;
+    background-color: aliceblue;
+    border: 1px, 1px, solid, black;
+    border-radius: 5px;
+    width: 610px;
+    height: 35px;
+    margin: 3px;
+}
+
+button:hover {
+    color: rgba(138, 0, 202, 0.541);
+    background-color: rgb(237, 229, 229);
+}
+
+#title {
+    text-align: center;
+    margin: 0, auto;
+}
+
+h1{
+    font-size: 40px;
+}
