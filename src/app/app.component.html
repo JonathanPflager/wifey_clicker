@@ -3,52 +3,44 @@
 <p id="score">Happiness Level: {{game_total | number: '1.2-2'}}</p>
 </div>
 <div id="left">
-<button (click)="drink_coffee()">Drink Coffee (Happiness + {{game_increment | number: '1.2-2' }})</button>
+<button (click)="drink_coffee()">Drink Coffee (Happiness + {{game_coffee_increment | number: '1.2-2' }})</button>
 <br>
-<button (click)="button_nap(game_nap_cost, game_nap_mult, game_nap_cost_mult)">
-    Take a Nap (Drink Coffee + {{game_nap_mult | number: '1.2-2'}} | Cost: 
-    {{game_nap_cost| number: '1.2-2'}})</button>
+<button (click)="button_nap()">
+    Take a Nap (Happiness + {{game_nap_increment | number: '1.2-2'}} )</button>
 <br>
-<button (click)="button_bed(game_bed_cost, game_bed_mult, game_bed_cost_mult)">
-    Bed Day (Drink Coffee + {{game_bed_mult | number: '1.2-2'}}  | Cost: 
-    {{game_bed_cost| number: '1.2-2' }})</button>
+<button (click)="button_bed()">
+    Bed Day (Drink Coffee + )</button>
 <br>
-<button (click)="button_shopping(game_shopping_cost, game_shopping_mult, game_shopping_cost_mult)">
-    Go Shopping (Drink Coffee + {{game_shopping_mult | number: '1.2-2'}}  | Cost: 
-    {{game_shopping_cost| number: '1.2-2' }})</button>
+<button (click)="button_shopping()">
+    Go Shopping (Drink Coffee + )</button>
 <br> 
-<button (click)="button_say_yes_day(game_say_yes_day_cost, game_say_yes_day_mult, game_say_yes_day_cost_mult)">Wifey Say Yes Day 
-    (Drink Coffee + {{game_say_yes_day_mult | number: '1.2-2'}}  | Cost: {{game_say_yes_day_cost | number: '1.2-2' }})</button>
+<button (click)="button_say_yes_day()">Wifey Say Yes Day 
+    (Drink Coffee + )</button>
 <br>
-<button (click)="button_wedding_day(game_wedding_day_cost, game_wedding_day_mult, game_wedding_day_cost_mult)">Celebrate Wedding Day #{{game_wedding_day_count}} 
-    (Drink Coffee + {{game_wedding_day_mult | number: '1.2-2'}} | Cost: {{game_wedding_day_cost | number: '1.2-2'}})</button>
+<button (click)="button_wedding_day()">Celebrate Wedding Day 
+    (Drink Coffee + )</button>
 <br>
-<button (click)="reset()">Reset for bonus once Happiness Level is more than 
-    {{game_reset_limit | number: '1.2-2' }}</button>
+<button (click)="reset()">Reset</button>
 </div>
 
 <div id="right">
 <button (click)="coffee_up(game_coffee_upgrade_cost, game_coffee_upgrade_mult, game_coffee_upgrade_cost_mult)">
     New Starbucks Cups (Coffee X {{game_coffee_upgrade_mult | number: '1.2-2'}} | Cost: {{game_coffee_upgrade_cost | number: '1.2-2'}})</button>
 <br>
-<button (click)="nap_up(game_nap_upgrade_cost, game_nap_upgrade_mult, game_nap_upgrade_cost_mult)">
-    Morning and Afternoon Nap (Nap Mulitpler X {{game_nap_upgrade_mult | number: '1.2-2'}} | Cost: {{game_nap_upgrade_cost | number: '1.2-2'}})</button>
+<button (click)="nap_up()">
+    Morning and Afternoon Nap (Nap Mulitpler X )</button>
 <br>
-<button (click)="bed_up(game_bed_upgrade_cost, game_bed_upgrade_mult, game_bed_upgrade_cost_mult)">
-    Breakfast in bed (Bed Day Mulitpler X {{game_bed_upgrade_mult | number: '1.2-2'}} | 
-    Cost: {{game_bed_upgrade_cost | number: '1.2-2'}})</button>
+<button (click)="bed_up()">
+    Breakfast in bed (Bed Day Mulitpler X )</button>
 <br>
-<button (click)="shopping_up(game_shopping_upgrade_cost, game_shopping_upgrade_mult, game_shopping_upgrade_cost_mult)">
-    Target Circle Week (Shopping Mulitpler X {{game_shopping_upgrade_mult | number: '1.2-2'}} | 
-    Cost: {{game_shopping_upgrade_cost | number: '1.2-2'}})</button>
+<button (click)="shopping_up()">
+    Target Circle Week (Shopping Mulitpler X )</button>
  <br>
- <button (click)="say_yes_day_up(game_say_yes_day_upgrade_cost, game_say_yes_day_upgrade_mult, game_say_yes_day_upgrade_cost_mult)">
-    Target Circle Week (Say Yes Day Mulitpler X {{game_say_yes_day_upgrade_mult | number: '1.2-2'}} | 
-    Cost: {{game_say_yes_day_upgrade_cost | number: '1.2-2'}})</button>
+ <button (click)="say_yes_day_up()">
+    Target Circle Week (Say Yes Day Mulitpler X )</button>
  <br>
- <button (click)="wedding_day_up(game_wedding_day_upgrade_cost, game_wedding_day_upgrade_mult, game_wedding_day_upgrade_cost_mult)">
-    Target Circle Week (Wedding Day Mulitpler X {{game_wedding_day_upgrade_mult | number: '1.2-2'}} | 
-    Cost: {{game_wedding_day_upgrade_cost | number: '1.2-2'}})</button>
+ <button (click)="wedding_day_up()">
+    Target Circle Week (Wedding Day Mulitpler X )</button>
  <br>
  <button (click)="hearts()">
     SUPER SECRET BUTTON</button>
