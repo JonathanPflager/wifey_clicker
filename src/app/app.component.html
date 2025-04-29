@@ -1,46 +1,44 @@
 <div id="title">
 <h1>Wifey Clicker {{display}} <br>Happy Wife Happy Life </h1>
-<p id="score">Happiness Level: {{game_total | number: '1.2-2'}}</p>
+<p id="score">Happiness Level: {{total | number: '1.2-2'}}</p>
 </div>
 <div id="left">
-<button (click)="drink_coffee()">Drink Coffee (Happiness + {{game_coffee_increment | number: '1.2-2' }})</button>
+<button (click)="drink_coffee()">Drink Coffee (Happiness + {{(coffee_inc * pMult) | number: '1.2-2' }})</button>
 <br>
-<button (click)="button_nap()">
-    Take a Nap (Happiness + {{game_nap_increment | number: '1.2-2'}} )</button>
+<button (click)="button_nap()"[disabled]="isNapDisabled" >
+    {{napString}}</button>
 <br>
-<button (click)="button_bed()">
-    Bed Day (Drink Coffee + )</button>
+<button (click)="button_bed()" [disabled]="isBedDisabled">
+    {{bedString}}</button>
 <br>
-<button (click)="button_shopping()">
-    Go Shopping (Drink Coffee + )</button>
+<button (click)="button_shopping()" [disabled]="isShopDisabled">
+    {{shopString}}</button>
 <br> 
-<button (click)="button_say_yes_day()">Wifey Say Yes Day 
-    (Drink Coffee + )</button>
+<button (click)="button_say_yes_day()" [disabled]="isYesDisabled">{{yesString}}</button>
 <br>
-<button (click)="button_wedding_day()">Celebrate Wedding Day 
-    (Drink Coffee + )</button>
+<button (click)="button_wedding_day()" [disabled]="isWeddingDisabled">{{weddingString}}</button>
 <br>
-<button (click)="reset()">Reset</button>
+<button (click)="reset()">Reset for 2x Mulitpler (Cost: {{reset_cost | number: '1.2-2'}})</button>
 </div>
 
 <div id="right">
-<button (click)="coffee_up(game_coffee_upgrade_cost, game_coffee_upgrade_mult, game_coffee_upgrade_cost_mult)">
-    New Starbucks Cups (Coffee X {{game_coffee_upgrade_mult | number: '1.2-2'}} | Cost: {{game_coffee_upgrade_cost | number: '1.2-2'}})</button>
+<button (click)="coffee_up()">
+    New Starbucks Cups (Coffee X {{coffee_up_mult | number: '1.2-2'}} | Cost: {{coffee_up_cost | number: '1.2-2'}})</button>
 <br>
 <button (click)="nap_up()">
-    Morning and Afternoon Nap (Nap Mulitpler X )</button>
+    Morning and Afternoon Nap (Nap Mulitpler X {{nap_up_mult| number: '1.2-2'}} | Cost: {{nap_up_cost | number: '1.2-2'}})</button>
 <br>
 <button (click)="bed_up()">
-    Breakfast in bed (Bed Day Mulitpler X )</button>
+    Breakfast in bed (Bed Day Mulitpler X {{bed_up_mult| number: '1.2-2'}} | Cost: {{bed_up_cost | number: '1.2-2'}})</button>
 <br>
 <button (click)="shopping_up()">
-    Target Circle Week (Shopping Mulitpler X )</button>
+    Target Circle Week (Shopping Mulitpler X {{shop_up_mult| number: '1.2-2'}} | Cost: {{shop_up_cost | number: '1.2-2'}})</button>
  <br>
  <button (click)="say_yes_day_up()">
-    Target Circle Week (Say Yes Day Mulitpler X )</button>
+    Target Circle Week (Say Yes Day Mulitpler X {{yes_up_mult| number: '1.2-2'}} | Cost: {{yes_up_cost | number: '1.2-2'}})</button>
  <br>
  <button (click)="wedding_day_up()">
-    Target Circle Week (Wedding Day Mulitpler X )</button>
+    Target Circle Week (Wedding Day Mulitpler X {{wedding_up_mult| number: '1.2-2'}} | Cost: {{wedding_up_cost | number: '1.2-2'}})</button>
  <br>
  <button (click)="hearts()">
     SUPER SECRET BUTTON</button>
